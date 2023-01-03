@@ -1,0 +1,21 @@
+body{
+    padding: 0;
+    margin : 0;
+    position: relative;
+}
+.card-header{
+    text-align: center;
+    background-color: rgb(21, 193, 206);
+}
+.card-body{
+    background-color: rgb(21, 193, 206);
+}
+.card{
+    margin:20px;
+    border-radius: 20px;
+    width:18rem;
+    height:40rem;
+}
+.btn{
+    border:2px solid black;
+}
