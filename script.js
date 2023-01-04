@@ -1,4 +1,4 @@
-var ser = document.querySelector(".row");
+var row = document.querySelector(".row");
 fetch("https://restcountries.com/v3.1/all")
 .then((response)=>response.json())
 .then((data)=>{
@@ -21,24 +21,26 @@ fetch("https://restcountries.com/v3.1/all")
 .catch((err)=>console.log(err))
 
 function Country(name,flag,poplation,region,capital,lattitude,longitude,countrycode){
-ser.innerHTML +=`
-<div class="col col-lg-3 col-md-6 col-sm-12">
-    <div class="card" >
+row.innerHTML +=`
+<div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
+    <div class="card">
     <div class="card-header">
- <h3><span style:"color:black;">${name}</span></h3>
+ <H1 id="title" class="text-center"><span style:"color:black;">${name}</span></H1>
  </div>
- <img src="${flag}" class="card-img-top">
+ <img src="${flag}" class="card-img-top" alt="flag">
  <div class="card-body">
- <p><span>Capital :</span> ${ capital}</p>
- <p><span>Country code :</span> ${ countrycode}</p>
-<p><span>Region :</span> ${ region }</p>
-<p><span>Population :</span> ${ poplation }</p>
- <p><span>Lattitude :</span> ${ lattitude}</p>
- <p><span>Longitude :</span> ${ longitude}</p>
- <a><button onclick="getWeather(${lattitude},${longitude})" class="btn">click for weather</button></a>
+ <div class="card-text">
+ <div><span>Capital :</span> ${ capital}</div>
+ <div><span>Country code :</span> ${ countrycode}</div>
+<div><span>Region :</span> ${ region }</div>
+<div><span>Population :</span> ${ poplation }</div>
+ <div><span>Lattitude :</span> ${ lattitude}</div>
+ <div><span>Longitude :</span> ${ longitude}</div>
+ <div><button onclick="getWeather(${lattitude},${longitude})" class="btn">click for weather</button></div>
  </div>
  </div>
  </div>
+ </div>.
     `   
 }
 
