@@ -10,11 +10,11 @@ body{
 .card-body{
     background-color: rgb(21, 193, 206);
 }
-.card{
-    margin:20px;
+.card h-100{
+    margin:10px;
     border-radius: 20px;
     width:18rem;
-    height:40rem;
+    height:20rem;
 }
 .btn{
     border:2px solid black;
